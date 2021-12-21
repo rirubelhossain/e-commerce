@@ -76,6 +76,17 @@
                                                 <li class="menu-item" >
                                                     <a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
                                                 </li>
+												<li>
+												<a href="{{ route('logout') }}"
+													onclick="event.preventDefault();       
+
+													document.getElementById('logout-form').submit();">
+													Logout
+												</a>
+												</li>
+												<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+														{{ csrf_field() }}
+												</form>
                                                 <!-- <li class="menu-item">
                                                         <a href="{{route('logout')}}" onclick="event.PreventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
                                                 </li>
@@ -93,7 +104,17 @@
                                                 <li class="menu-item" >
                                                     <a title="Dashboard" href="{{route('user.dashboard')}}">Dashboard</a>
                                                 </li>
+												<li>
+												<a href="{{ route('logout') }}"
+													onclick="event.preventDefault();       
 
+													document.getElementById('logout-form').submit();">
+													Logout
+												</a>
+												</li>
+												<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+														{{ csrf_field() }}
+												</form>
                                                 <!-- <form method = "post" action="{{route('logout')}}">
                                                     @csrf
                                                     <li class="menu-item">
