@@ -42,8 +42,8 @@
 						</div>
 						<div class="topbar-menu right-menu">
 							<ul>
-								<li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
-								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
+								<!-- <li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
+								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li> -->
 								<li class="menu-item lang-menu menu-item-has-children parent">
 									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu lang" >
@@ -67,6 +67,50 @@
 										</li>
 									</ul>
 								</li>
+                                @if(Route::has('login'))
+                                    @auth   
+                                        @if(Auth::user()->utype === 'ADM')
+                                        <li class="menu-item menu-item-has-children parent" >
+                                            <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="submenu curency" >
+                                                <li class="menu-item" >
+                                                    <a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
+                                                </li>
+                                                <!-- <li class="menu-item">
+                                                        <a href="{{route('logout')}}" onclick="event.PreventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
+                                                </li>
+                                                <form id ="logout-form" method = "POST" action="{{route('logout')}}">
+                                                    @csrf
+                                                    
+                                                </form> -->
+                                                
+                                            </ul>
+                                        </li>
+                                        @else
+                                        <li class="menu-item menu-item-has-children parent" >
+                                            <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="submenu curency" >
+                                                <li class="menu-item" >
+                                                    <a title="Dashboard" href="{{route('user.dashboard')}}">Dashboard</a>
+                                                </li>
+
+                                                <!-- <form method = "post" action="{{route('logout')}}">
+                                                    @csrf
+                                                    <li class="menu-item">
+                                                        <a href="{{route('logout')}}" onclick="event.PreventDefault(); .closets('form').submit();" >Logout</a>
+                                                    </li>
+                                                </form> -->
+                                                
+                                            </ul>
+                                        </li>
+                                        @endif
+
+                                    @else
+                                        <li class="menu-item" ><a title="Register or Login" href="{{route('login')}}">Login</a></li>
+								        <li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+                                    @endif
+                                @endif
+
 							</ul>
 						</div>
 					</div>
@@ -76,7 +120,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="assets/images/logo-top-1.png" alt="mercado"></a>
+							<a href="/" class="link-to-home"><img src="{{asset('assets/images/logo-top-1.png')}}" alt="mercado"></a>
 						</div>
 
 						<div class="wrap-search center-section">
@@ -159,7 +203,7 @@
 						<div class="container">
 							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
 								<li class="menu-item home-icon">
-									<a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+									<a href="/" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 								</li>
 								<li class="menu-item">
 									<a href="/about" class="link-term mercado-item-title">About Us</a>

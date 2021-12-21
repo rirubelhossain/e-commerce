@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/'; /// removed dashboard it will take home page
 
     /**
      * The controller namespace for the application.
