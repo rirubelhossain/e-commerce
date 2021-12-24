@@ -7,6 +7,7 @@ use App\Http\Livewire\CartComponent ;
 use App\Http\Livewire\CheckoutComponent ;
 use App\Http\Livewire\AboutComponent ;
 use App\Http\Livewire\ContactComponent ;
+use App\Http\Livewire\DetailsComponent ;
 use App\Http\Livewire\User\UserDashboardComponent ;
 use App\Http\Livewire\Admin\AdminDashboardComponent ;
 
@@ -19,6 +20,7 @@ Route :: get('/cart', CartComponent::class );
 Route :: get('/checkout', CheckoutComponent::class );
 Route :: get('/about', AboutComponent::class );
 Route :: get('/contact', ContactComponent::class );
+Route :: get('/product/{slug}', DetailsComponent::class )->name('product.details');
 
 
 

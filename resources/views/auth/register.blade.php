@@ -41,7 +41,7 @@
 										<label for="frm-reg-cfpass">Confirm Password *</label>
 										<input type="password" id="frm-reg-cfpass" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
 									</fieldset>
-									<!-- <input type="submit" class="btn btn-sign" value="Register" name="register"> -->
+									 
                                     <button type = "submit" class ="btn btn-primary" value = "Register">Submit</button>
 								</form>
 							</div>											
