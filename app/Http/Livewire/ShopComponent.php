@@ -6,9 +6,10 @@ use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Cart ;
+//use WithPagination;
 class ShopComponent extends Component
 {   /// Here are two properties which is sorting and pagesizing 
-
+   // use WithPagination ;    
     public $sorting ;
     public $pagesize ;
 
@@ -23,7 +24,7 @@ class ShopComponent extends Component
         session()->flash('success_message' , 'Item added in Cart') ;
         return redirect()->route('product.cart') ;
     }  
-    use WithPagination ;
+  //  use WithPagination ;
     public function render()
     {   
 
@@ -40,11 +41,13 @@ class ShopComponent extends Component
             $products = Product::paginate($this->pagesize);
         }
 
-
         $products = Product::paginate(12);
         /// Just for test
         $popular_products = Product::inRandomOrder()->limit(4)->get();/// Just used her
         //
+        // $category = $this->param('category');
+        // $this['scopeCategory'] = Gallery::where('category', $category)->paginate(12);
         return view('livewire.shop-component',['products'=>$products,'popular_products'=>$popular_products])->layout('layouts.base');
     }
 }
+
