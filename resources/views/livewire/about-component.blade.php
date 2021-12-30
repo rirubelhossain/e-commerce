@@ -11,7 +11,7 @@
 		</div>
 		
 		<div class="container">
-			<!-- <div class="main-content-area"> -->
+			 
 				<div class="aboutus-info style-center">
 					<b class="box-title">Interesting Facts</b>
 					<p class="txt-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
@@ -193,9 +193,9 @@
 					</div>
 
 				</div>
-			<!-- </div> -->
+			 
 			
 
-		</div><!--end container-->
+		</div> 
 
 	</main>

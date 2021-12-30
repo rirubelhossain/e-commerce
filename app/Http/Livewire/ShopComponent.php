@@ -7,16 +7,18 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Cart ;
 //use WithPagination;
+use App\Models\Category ;
 class ShopComponent extends Component
 {   /// Here are two properties which is sorting and pagesizing 
    // use WithPagination ;    
-    public $sorting ;
-    public $pagesize ;
+   public $sorting ;
+   public $pagesize ;
 
-    public function mount(){
-        $this->sorting = "default";
-        $this->pagesize = 12;
-    }
+   public function mount()
+   {
+       $this->sorting = "default";
+       $this->pagesize = 12;
+   }
 
     public function store($probuct_id , $product_name , $product_price)
     {
@@ -28,20 +30,24 @@ class ShopComponent extends Component
     public function render()
     {   
 
-        if( $this->sorting == "date"){
-            $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
-        }
-        else if($this->sorting == 'price'){
-            $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
-        }
-        else if( $this->sorting == 'price_desc'){
-            $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);
-        }
-        else{
-            $products = Product::paginate($this->pagesize);
-        }
+       ///price sorting and asc or desc order condition here 
+       if($this->sorting == "date")
+       {
+           $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
+       }
+       else if($this->sorting == "price")
+       {
+           $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
+       }
+       else if($this->sorting == "price-desc")
+       {
+           $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);
+       }
+       else{
+           $products = Product::paginate($this->pagesize);
+       }
 
-        $products = Product::paginate(12);
+        //$products = Product::paginate(12);
         /// Just for test
         $popular_products = Product::inRandomOrder()->limit(4)->get();/// Just used her
         //

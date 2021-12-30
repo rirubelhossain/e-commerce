@@ -19,34 +19,7 @@
 							    <li data-thumb="{{asset('assets/images/products')}}/{{$product->image}}">
 							    	<img src="{{asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}" />
 							    </li>
-
-							    <!-- <li data-thumb="{{asset('assets/images/products/digital_17.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_17.jpg')}}" alt="product thumbnail" />
-							    </li>
-
-							    <li data-thumb="{{asset('assets/images/products/digital_15.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_15.jpg')}}" alt="product thumbnail" />
-							    </li>
-
-							    <li data-thumb="{{asset('assets/images/products/digital_2.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_2.jpg')}}" alt="product thumbnail" />
-							    </li>
-
-							    <li data-thumb="{{asset('assets/images/products/digital_8.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_8.jpg')}}" alt="product thumbnail" />
-							    </li>
-
-							    <li data-thumb="{{asset('assets/images/products/digital_10.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_10.jpg')}}" alt="product thumbnail" />
-							    </li>
-
-							    <li data-thumb="{{asset('assets/images/products/digital_12.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_12.jpg')}}" alt="product thumbnail" />
-							    </li>
-
-							    <li data-thumb="{{asset('assets/images/products/digital_14.jpg')}}">
-							    	<img src="{{asset('assets/images/products/digital_14.jpg')}}" alt="product thumbnail" />
-							    </li> -->
+ 
 
 							  </ul>
 							</div>
@@ -63,11 +36,7 @@
                             <h2 class="product-name">{{$product->name}}</h2>
                             <div class="short-desc">
                                 {{$product->short_description}}
-                                <!-- <ul>
-                                    <li>7,9-inch LED-backlit, 130Gb</li>
-                                    <li>Dual-core A7 with quad-core graphics</li>
-                                    <li>FaceTime HD Camera 7.0 MP Photos</li>
-                                </ul> -->
+                                
                             </div>
                             <div class="wrap-social">
                             	<a class="link-socail" href="#"><img src="{{asset('assets/images/social-list.png')}}" alt=""></a>
@@ -144,7 +113,7 @@
 													</div>
 												</li>
 											</ol>
-										</div><!-- #comments -->
+										</div> 
 
 										<div id="review_form_wrapper">
 											<div id="review_form">
@@ -188,16 +157,16 @@
 														</p>
 													</form>
 
-												</div><!-- .comment-respond-->
-											</div><!-- #review_form -->
-										</div><!-- #review_form_wrapper -->
+												</div> 
+											</div> 
+										</div> 
 
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div><!--end main products area-->
+				</div> 
 
 				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
 					<div class="widget widget-our-services ">
@@ -238,7 +207,7 @@
 								</li>
 							</ul>
 						</div>
-					</div><!-- Categories widget-->
+					</div> 
 
 					<div class="widget mercado-widget widget-product">
 						<h2 class="widget-title">Popular Products</h2>
@@ -265,7 +234,7 @@
 						</div>
 					</div>
 
-				</div><!--end sitebar-->
+				</div> 
 
 				<div class="single-advance-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="wrap-show-advance-info-box style-1 box-in-site">
@@ -296,12 +265,12 @@
 								 
 
 							</div>
-						</div><!--End wrap-products-->
+						</div> 
 					</div>
 				</div>
 
-			</div><!--end row-->
+			</div> 
 
-		</div><!--end container-->
+		</div> 
 
 	</main>
