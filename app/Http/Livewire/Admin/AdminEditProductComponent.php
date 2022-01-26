@@ -76,11 +76,9 @@ class AdminEditProductComponent extends Component
         session()->flash('message', 'Product has been Updated Successfully');
     }
 
-
-
     public function render()
     {   
         $categories  = Category::all();
-        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories]);
+        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories])->layout('layouts.base');
     }
 }
