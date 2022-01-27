@@ -12,7 +12,7 @@
 							<h2 class="f-title"><b>{{$slide->title}}</b></h2>
 							<span class="subtitle">{{$slide->subtitle}}</span>
 							<p class="sale-info">Only price: <span class="price">${{$slide->price}}</span></p>
-							<a href=" " class="btn-link">Shop Now</a>
+							<a href="{{$slide->link}}" class="btn-link">Shop Now</a>
 						</div>
 					</div>
 				@endforeach
